@@ -9,10 +9,29 @@
 }
 
 .container section {
-    flex: 1;
+    display: flex;
+    margin-top: 3rem;
+    flex-wrap: wrap;
 
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 6.25rem;
     align-content: center;
+}
+
+.container section > div {
+    width: 50%;
+}
+
+.container section > div:last-child {
+    padding-left: 2rem;
+}
+
+@media only screen and (max-width: 599px) {
+    .container section > div {
+        width: 100%;
+    }
+
+    .container section > div:last-child {
+        margin-top: 2rem;
+        padding-left: 0;
+        margin-bottom: 3rem;
+    }
 }
